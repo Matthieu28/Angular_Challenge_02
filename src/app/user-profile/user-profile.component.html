@@ -1,0 +1,13 @@
+<section>
+  <img [src]="user.photo" [alt]="name" />
+  <div class="div_user_info">
+    <p>Nom : {{ user.name }}</p>
+    <p>Prénom : {{ user.firstName }}</p>
+    <p>{{ user.quote }}</p>
+    <input type="text" [(ngModel)]="user.quote" />
+  </div>
+  <div class="div_age_info">
+    <p [style.visibility]="visible">Age : {{ user.age }}</p>
+    <button (click)="setVisible()">Afficher/Masquer mon âge</button>
+  </div>
+</section>
